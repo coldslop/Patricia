@@ -13,7 +13,7 @@ jobs:
         run: ls -R
 
       - name: Navigate to Correct Directory
-        run: cd engine  # Change this to the correct folder
+        run: cd engine/Makefile  # Change this to the correct folder
 
       - name: Build with Make
         run: make
