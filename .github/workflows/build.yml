@@ -6,13 +6,14 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: brew install cmake ninja
+      - name: List Files (Debugging)
+        run: ls -R
 
-      - name: Configure and Build
-        run: |
-          cmake -B build -G Ninja -DCMAKE_OSX_ARCHITECTURES=arm64
-          cmake --build build
+      - name: Navigate to Correct Directory
+        run: cd engine  # Change this to the correct folder
+
+      - name: Build with Make
+        run: make
